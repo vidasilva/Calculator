@@ -37,6 +37,8 @@ This is a simple yet structured calculator application built using **JavaFX**. I
                               ↓
                          [Final Result]
 
+```
+
 --
                          
 ## 🚧 Features in Progress / To Do
