@@ -38,8 +38,6 @@ This is a simple yet structured calculator application built using **JavaFX**. I
                          [Final Result]
 
 ```
-
---
                          
 ## 🚧 Features in Progress / To Do
 
@@ -55,6 +53,7 @@ This is a simple yet structured calculator application built using **JavaFX**. I
 
 ## 📁 Folder Structure
 
+```plaintext
 src/
 ├── app/
 │   ├── controller/
@@ -69,28 +68,28 @@ src/
 │   └── util/
 │       └── TextFieldUtil.java
 
---
+```
 
 ## 🎯 Why this project?
 
 This project was built as a learning and portfolio piece to:
 
-    - Understand expression parsing
-    - Apply classical algorithms in a practical UI
-    - Improve JavaFX proficiency
-    - Show clean architecture, enum-driven logic, and modular design
+- Understand expression parsing
+- Apply classical algorithms in a practical UI
+- Improve JavaFX proficiency
+- Show clean architecture, enum-driven logic, and modular design
 
 ## 🧠 Concepts Highlighted
 
-    - Tokenization
-    - Shunting Yard algorithm
-    - Reverse Polish Notation (RPN)
-    - Stack-based evaluation
-    - MVC-ish structure in JavaFX
+- Tokenization
+- Shunting Yard algorithm
+- Reverse Polish Notation (RPN)
+- Stack-based evaluation
+- MVC-ish structure in JavaFX
 
 ## 👤 Author
 
 Made by Vitor D.G. Silva
 
-[@vidasilva](https://github.com/vidasilva)
-[Vitor D.G. Silva](https://www.linkedin.com/in/vidasilva/)
+- [@vidasilva](https://github.com/vidasilva)
+- [Vitor D.G. Silva](https://www.linkedin.com/in/vidasilva/)
