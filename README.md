@@ -91,5 +91,5 @@ This project was built as a learning and portfolio piece to:
 
 Made by Vitor D.G. Silva
 
-- [@vidasilva](https://github.com/vidasilva)
-- [Vitor D.G. Silva](https://www.linkedin.com/in/vidasilva/)
+- [Github](https://github.com/vidasilva)
+- [LinkedIn](https://www.linkedin.com/in/vidasilva/)
