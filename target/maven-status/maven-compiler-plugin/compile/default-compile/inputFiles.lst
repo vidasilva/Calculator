@@ -1,0 +1,11 @@
+/home/vitor/NetBeansProjects/Calculator/src/main/java/app/App.java
+/home/vitor/NetBeansProjects/Calculator/src/main/java/app/controller/PrimaryController.java
+/home/vitor/NetBeansProjects/Calculator/src/main/java/app/logic/CalculatorEngine.java
+/home/vitor/NetBeansProjects/Calculator/src/main/java/app/logic/Tokenizer.java
+/home/vitor/NetBeansProjects/Calculator/src/main/java/app/model/Number.java
+/home/vitor/NetBeansProjects/Calculator/src/main/java/app/model/Operator.java
+/home/vitor/NetBeansProjects/Calculator/src/main/java/app/model/Parenthesis.java
+/home/vitor/NetBeansProjects/Calculator/src/main/java/app/model/Token.java
+/home/vitor/NetBeansProjects/Calculator/src/main/java/app/util/SceneManager.java
+/home/vitor/NetBeansProjects/Calculator/src/main/java/app/util/TextFieldUtil.java
+/home/vitor/NetBeansProjects/Calculator/src/main/java/module-info.java
