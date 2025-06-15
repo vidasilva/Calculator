@@ -82,8 +82,8 @@ This project was built as a learning and portfolio piece to:
 ## 🧠 Concepts Highlighted
 
 - Tokenization
-- Shunting Yard algorithm
-- Reverse Polish Notation (RPN)
+- [Shunting Yard algorithm](https://en.wikipedia.org/wiki/Shunting-yard_algorithm), originally developed by Edsger Dijkstra.
+- [Reverse Polish Notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation) (RPN)
 - Stack-based evaluation
 - MVC-ish structure in JavaFX
 
