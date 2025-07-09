@@ -9,7 +9,6 @@ import app.util.TextFieldUtil;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -24,62 +23,67 @@ public class PrimaryController implements Initializable {
     @FXML
     private FlowPane clearButton, equalsButton;
 
-    @FXML // function that calls appendToInput function
+    private final List<Token> currentTokens = new ArrayList<>();
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        TextFieldUtil.applySymbolSubstitution(inputTextField);
+        clearButton.setOnMouseClicked(eh -> inputTextField.clear());
+        equalsButton.setOnMouseClicked(eh -> evaluateExpression());
+    }
+
+    @FXML
     private void handleButtonClick(MouseEvent event) {
         FlowPane source = (FlowPane) event.getSource();
         String value = (String) source.getUserData();
         appendToInput(value);
     }
 
-    private final List<Token> currentTokens = new ArrayList<>(); // Working with tokens makes it easier to evaluate later
+    private void appendToInput(String value) {
+        Token token = determineToken(value);
+        if (token != null) {
+            currentTokens.add(token);
+        } else {
+            System.err.println("Unknown input: " + value);
+        }
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-
-        TextFieldUtil.applySymbolSubstitution(inputTextField); // This 'sanitizes' the String's mathy symbols
-        clearButton.setOnMouseClicked(eh -> inputTextField.clear()); // This (obviously) cleans the text-field
-        equalsButton.setOnMouseClicked(eh -> evaluateExpression()); // This calls the evaluation function - or method e.e - below
+        insertTextIntoInput(value);
     }
 
-    // TO DO: tweak this later
-    private void appendToInput(String value) {
-        Optional<Number> maybeNum = Number.fromString(value);
-        if (maybeNum.isPresent() || value.equals(".")) { // Try Number
-            currentTokens.add(new Token(Token.Type.NUMBER, value)); // Handle Number
-        } else {
-            Optional<Operator> maybeOp = Operator.fromSymbol(value);
-            if (maybeOp.isPresent()) { // Try Operator
-                currentTokens.add(new Token(Token.Type.OPERATOR, value)); // Handle Operator
-            } else if (value.equals("(") || value.equals(")")) { // Try Parenthesis
-                Token token = new Token(Token.Type.PARENTHESIS, value); // Handle Parentheses
-            } else {
-                System.err.println("Unknown input: " + value);
-            }
+    private Token determineToken(String value) {
+        if (Number.fromString(value).isPresent() || value.equals(".")) {
+            return new Token(Token.Type.NUMBER, value);
         }
-        // OCD / UX friendly
+        if (Operator.fromSymbol(value).isPresent()) {
+            return new Token(Token.Type.OPERATOR, value);
+        }
+        if (value.equals("(") || value.equals(")")) {
+            return new Token(Token.Type.PARENTHESIS, value);
+        }
+        if (value.equals("√") || value.equals("²") || value.equals("^")) {
+            return new Token(Token.Type.FUNCTION, value);
+        }
+        return null;
+    }
+
+    private void insertTextIntoInput(String value) {
         int caretPosition = inputTextField.getCaretPosition();
         inputTextField.insertText(caretPosition, value);
         inputTextField.positionCaret(caretPosition + value.length());
-
     }
 
     private void evaluateExpression() {
         try {
-            String input = inputTextField.getText(); // Full expression as typed
-            List<Token> tokens = Tokenizer.tokenize(input); // 'Sanitization' before evaluation of the expression
-            double result = CalculatorEngine.evaluate(tokens); // Evaluation
+            String input = inputTextField.getText();
+            List<Token> tokens = Tokenizer.tokenize(input);
+            double result = CalculatorEngine.evaluate(tokens);
 
-            // UX Stuff
-            outputTextField.setText(inputTextField.getText().trim());
+            outputTextField.setText(input.trim());
             inputTextField.clear();
-            int caretPosition = inputTextField.getCaretPosition();
-            inputTextField.insertText(caretPosition, String.valueOf(result));
-            inputTextField.positionCaret(caretPosition + String.valueOf(result).length());
-
+            insertTextIntoInput(String.valueOf(result));
         } catch (IllegalArgumentException ex) {
             outputTextField.setText("Error");
             System.err.println("Evaluation error: " + ex.getMessage());
         }
     }
-
 }

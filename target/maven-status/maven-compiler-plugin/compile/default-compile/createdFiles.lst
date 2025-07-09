@@ -1,3 +1,4 @@
+app/model/Function.class
 app/logic/CalculatorEngine$1.class
 app/logic/CalculatorEngine.class
 app/model/Token$Type.class

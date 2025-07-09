@@ -1,5 +1,6 @@
 package app.logic;
 
+import app.model.Function;
 import app.model.Operator;
 import app.model.Token;
 import java.util.ArrayList;
@@ -29,6 +30,8 @@ public class Tokenizer {
                     String symbol = String.valueOf(c);
                     if (Operator.fromSymbol(symbol).isPresent()) {
                         tokens.add(new Token(Token.Type.OPERATOR, symbol));
+                    } else if (Function.fromSymbol(symbol).isPresent()) {
+                        tokens.add(new Token(Token.Type.FUNCTION, symbol));
                     } else if (Character.isWhitespace(c)) {
                         // ignore spaces
                     } else {

@@ -3,7 +3,7 @@ package app.model;
 public class Token {
 
     public enum Type {
-        NUMBER, OPERATOR, PARENTHESIS
+        NUMBER, OPERATOR, FUNCTION, PARENTHESIS
     }
 
     private final Type type;

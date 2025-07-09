@@ -2,6 +2,7 @@
 /home/vitor/NetBeansProjects/Calculator/src/main/java/app/controller/PrimaryController.java
 /home/vitor/NetBeansProjects/Calculator/src/main/java/app/logic/CalculatorEngine.java
 /home/vitor/NetBeansProjects/Calculator/src/main/java/app/logic/Tokenizer.java
+/home/vitor/NetBeansProjects/Calculator/src/main/java/app/model/Function.java
 /home/vitor/NetBeansProjects/Calculator/src/main/java/app/model/Number.java
 /home/vitor/NetBeansProjects/Calculator/src/main/java/app/model/Operator.java
 /home/vitor/NetBeansProjects/Calculator/src/main/java/app/model/Parenthesis.java

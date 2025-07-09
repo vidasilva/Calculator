@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.FlowPane?>
@@ -9,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:controller="app.controller.PrimaryController" style="-fx-background-color: #242424;" alignment="TOP_CENTER" fillWidth="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="300.0" spacing="10.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" fillWidth="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="300.0" spacing="10.0" style="-fx-background-color: #242424;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.PrimaryController">
     <children>
         <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" VBox.vgrow="ALWAYS">
             <children>
@@ -17,7 +16,7 @@
                     <children>
                         <VBox alignment="BOTTOM_CENTER" prefHeight="208.0" prefWidth="270.0" style="-fx-background-color: #404040; -fx-background-radius: 5;" VBox.vgrow="ALWAYS">
                             <children>
-                                <TextField fx:id="outputTextField" nodeOrientation="RIGHT_TO_LEFT" style="-fx-background-color: none;-fx-text-fill: white" editable="false">
+                                <TextField fx:id="outputTextField" editable="false" nodeOrientation="RIGHT_TO_LEFT" style="-fx-background-color: none;-fx-text-fill: white">
                                     <font>
                                         <Font size="16.0" />
                                     </font>
@@ -66,7 +65,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="sevenButton" userData="7" onMouseClicked="#handleButtonClick"   alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="sevenButton" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" userData="7" VBox.vgrow="NEVER">
                             <children>
                                 <Label text="7" textFill="WHITE">
                                     <font>
@@ -75,7 +74,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="fourButton" userData="4" onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="fourButton" alignment="CENTER" layoutX="10.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" userData="4" VBox.vgrow="NEVER">
                             <children>
                                 <Label text="4" textFill="WHITE">
                                     <font>
@@ -84,7 +83,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="oneButton" userData="1" onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="223.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="oneButton" alignment="CENTER" layoutX="10.0" layoutY="223.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" userData="1" VBox.vgrow="NEVER">
    
                             <children>
                                 <Label text="1" textFill="WHITE">
@@ -94,7 +93,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="zeroButton" userData="0" onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="250.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="zeroButton" alignment="CENTER" layoutX="10.0" layoutY="250.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" userData="0" VBox.vgrow="NEVER">
 
                             <children>
                                 <Label text="0" textFill="WHITE">
@@ -108,7 +107,7 @@
                 </VBox>
                 <VBox layoutX="380.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="5.0" HBox.hgrow="ALWAYS">
                     <children>
-                        <FlowPane fx:id="leftParenthesisButton" userData="(" onMouseClicked="#handleButtonClick" alignment="CENTER" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="leftParenthesisButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" userData="(" VBox.vgrow="NEVER">
 
                             <children>
                                 <Label text="(" textFill="WHITE">
@@ -118,7 +117,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="eightButton" userData="8" onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="eightButton" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" userData="8" VBox.vgrow="NEVER">
 
                             <children>
                                 <Label text="8" textFill="WHITE">
@@ -128,7 +127,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="fiveButton" userData="5" onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="fiveButton" alignment="CENTER" layoutX="10.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" userData="5" VBox.vgrow="NEVER">
 
                             <children>
                                 <Label text="5" textFill="WHITE">
@@ -138,7 +137,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="twoButton" userData="2" onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="223.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="twoButton" alignment="CENTER" layoutX="10.0" layoutY="223.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" userData="2" VBox.vgrow="NEVER">
 
                             <children>
                                 <Label text="2" textFill="WHITE">
@@ -148,7 +147,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="floatingPointButton" userData="." onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="250.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="floatingPointButton" alignment="CENTER" layoutX="10.0" layoutY="250.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" userData="." VBox.vgrow="NEVER">
     
                             <children>
                                 <Label text="." textFill="WHITE">
@@ -162,7 +161,7 @@
                 </VBox>
                 <VBox layoutX="328.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="5.0" HBox.hgrow="ALWAYS">
                     <children>
-                        <FlowPane fx:id="rightParenthesisButton" userData=")" onMouseClicked="#handleButtonClick" alignment="CENTER" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="rightParenthesisButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" userData=")" VBox.vgrow="NEVER">
 
                             <children>
                                 <Label text=")" textFill="WHITE">
@@ -172,7 +171,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="nineButton" userData="9" onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="nineButton" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" userData="9" VBox.vgrow="NEVER">
    
                             <children>
                                 <Label text="9" textFill="WHITE">
@@ -182,7 +181,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="sixButton" userData="6" onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="sixButton" alignment="CENTER" layoutX="10.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" userData="6" VBox.vgrow="NEVER">
 
                             <children>
                                 <Label text="6" textFill="WHITE">
@@ -192,7 +191,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="threeButton" userData="3" onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="223.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="threeButton" alignment="CENTER" layoutX="10.0" layoutY="223.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #505050; -fx-background-radius: 5;" userData="3" VBox.vgrow="NEVER">
 
                             <children>
                                 <Label text="3" textFill="WHITE">
@@ -202,7 +201,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="percentageButton" userData="\%" onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="250.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="percentageButton" alignment="CENTER" layoutX="10.0" layoutY="250.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" userData="\%" VBox.vgrow="NEVER">
   
                             <children>
                                 <Label text="\%" textFill="WHITE">
@@ -226,7 +225,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="divisionButton" userData="÷" onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="divisionButton" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" userData="÷" VBox.vgrow="NEVER">
             
                             <children>
                                 <Label fx:id="divideButton" text="÷" textFill="WHITE">
@@ -236,7 +235,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="multiplicationButton" userData="×" onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="multiplicationButton" alignment="CENTER" layoutX="10.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" userData="×" VBox.vgrow="NEVER">
 
                             <children>
                                 <Label text="×" textFill="WHITE">
@@ -246,7 +245,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="subtractionButton" userData="−" onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="223.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="subtractionButton" alignment="CENTER" layoutX="10.0" layoutY="223.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" userData="−" VBox.vgrow="NEVER">
            
                             <children>
                                 <Label text="−" textFill="WHITE">
@@ -256,7 +255,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="sumButton" userData="+" onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="250.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="sumButton" alignment="CENTER" layoutX="10.0" layoutY="250.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" userData="+" VBox.vgrow="NEVER">
                          
                             <children>
                                 <Label text="+" textFill="WHITE">
@@ -270,17 +269,17 @@
                 </VBox>
                 <VBox layoutX="223.0" layoutY="10.0" spacing="5.0" HBox.hgrow="ALWAYS">
                     <children>
-                        <FlowPane fx:id="piButton" userData="π" onMouseClicked="#handleButtonClick" alignment="CENTER" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="powButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" userData="π" VBox.vgrow="NEVER">
                           
                             <children>
-                                <Label text="π" textFill="WHITE">
+                                <Label text="pow" textFill="WHITE">
                                     <font>
                                         <Font name="System Bold" size="16.0" />
                                     </font>
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="rootButton" userData="√" onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="rootButton" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" userData="√" VBox.vgrow="NEVER">
                      
                             <children>
                                 <Label text="√" textFill="WHITE">
@@ -290,7 +289,7 @@
                                 </Label>
                             </children>
                         </FlowPane>
-                        <FlowPane fx:id="squareButton" userData="²" onMouseClicked="#handleButtonClick" alignment="CENTER" layoutX="10.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" VBox.vgrow="NEVER">
+                        <FlowPane fx:id="squareButton" alignment="CENTER" layoutX="10.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="100.0" minHeight="-Infinity" minWidth="50.0" onMouseClicked="#handleButtonClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3a3a3a; -fx-background-radius: 5;" userData="²" VBox.vgrow="NEVER">
                    
                             <children>
                                 <Label text="x²" textFill="WHITE">

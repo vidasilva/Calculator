@@ -10,18 +10,22 @@ public class TextFieldUtil {
             String character = event.getCharacter();
 
             switch (character) {
-                case "*":
+                case "*" -> {
                     event.consume();
                     insertAtCaret(textField, "×");
-                    break;
-                case "/":
+                }
+                case "/" -> {
                     event.consume();
                     insertAtCaret(textField, "÷");
-                    break;
-                case "-":
+                }
+                case "-" -> {
                     event.consume();
                     insertAtCaret(textField, "−");
-                    break;
+                }
+                case "**2" -> {
+                    event.consume();
+                    insertAtCaret(textField, "²");
+                }
             }
         });
     }
